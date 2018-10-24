@@ -25,5 +25,9 @@ gitsmash() {
     git push origin head
 }
 
+dpiscale() {
+    gsettings set org.gnome.desktop.interface text-scaling-factor $1
+}
+
 export GITSMASHHELP="${RED}smashgit <comment>${NC} adds all files to the git repo, comments and pushes to head."
 echo -e $GITSMASHHELP
