@@ -1,0 +1,1 @@
+cp scripts/edit_this_file.sh scripts/onebox.sh

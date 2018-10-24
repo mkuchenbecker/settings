@@ -3,7 +3,7 @@ echo_blue "#####################################################################
 
 export lyft=$GOPATH/src/github.com/lyft/
 
-source $DIR/edit_this_file.sh
+source $DIR/onebox.sh
 
 echo -e ${RED}MYONEBOX${NC}:$MYONEBOX
 
