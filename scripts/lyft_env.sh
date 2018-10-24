@@ -3,11 +3,8 @@ echo_blue "#####################################################################
 
 export lyft=$GOPATH/src/github.com/lyft/
 
+source $DIR/edit_this_file.sh
 
-export ONEBOX_ROOT=onebox.dev.lyft.net
-export ONEBOXNAME=mkuchenbecker
-
-export MYONEBOX=$ONEBOXNAME-$ONEBOX_ROOT 
 echo -e ${RED}MYONEBOX${NC}:$MYONEBOX
 
 export STASHBOX=stashdblib-legacy-$MYONEBOX
@@ -19,11 +16,11 @@ echo -e ${RED}STASHBOX${NC}:$STASHBOX
 scp_env() {
     echo 'Copying ENV to onebox'
     ssh $MYONEBOX 'mkdir env && mkdir vim'
-    scp $DIR/env.sh $MYONEBOX:/home/mkuchenbecker/env/env.sh
-    scp $DIR/gen_env.sh $MYONEBOX:/home/mkuchenbecker/env/gen_env.sh
-    scp $DIR/lyft_env.sh $MYONEBOX:/home/mkuchenbecker/env/lyft_env.sh
-    scp $DIR/lyft_env.sh $MYONEBOX:/home/mkuchenbecker/env/lyft_env.sh
-    scp ~/.vimrc $MYONEBOX:/home/mkuchenbecker/.vimrc
+    scp $DIR/env.sh $MYONEBOX:/home/$ONEBOXNAME/env/env.sh
+    scp $DIR/gen_env.sh $MYONEBOX:/home/$ONEBOXNAME/env/gen_env.sh
+    scp $DIR/lyft_env.sh $MYONEBOX:/home/$ONEBOXNAME/env/lyft_env.sh
+    scp $DIR/lyft_env.sh $MYONEBOX:/home/$ONEBOXNAME/env/lyft_env.sh
+    scp ~/.vimrc $MYONEBOX:/home/$ONEBOXNAME/.vimrc
 }
 echo -e "${RED}scp_env${NC} Copy env confifig to onebox."
 
