@@ -61,4 +61,7 @@ fdiff(){
 }
 echo -e "${RED}fdiff${NC}  git diff --stat --color master"
 
+
+echo -e $GITSMASHHELP
+
 echo_blue "################################################################################"
