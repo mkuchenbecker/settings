@@ -22,11 +22,21 @@ gitsmash() {
     else
         git commit -m "Git Smash"
     fi
-    git push origin head
+    git push origin HEAD
 }
 
 dpiscale() {
     gsettings set org.gnome.desktop.interface text-scaling-factor $1
+}
+
+nterm() {
+    ORIG=$PS1
+    TITLE="\e]2;$1\a"
+    PS1=${ORIG}${TITLE}
+}
+
+frevert() {
+    git checkout master $1
 }
 
 export GITSMASHHELP="${RED}smashgit <comment>${NC} adds all files to the git repo, comments and pushes to head."
