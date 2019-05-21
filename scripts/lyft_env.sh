@@ -7,7 +7,6 @@ source $DIR/onebox.sh
 source $DIR/sync.sh
 
 echo -e ${RED}MYONEBOX${NC}:$MYONEBOX
-
 export STASHBOX=stashdblib-legacy-$MYONEBOX
 echo -e ${RED}STASHBOX${NC}:$STASHBOX
 
@@ -76,7 +75,13 @@ fuckglide() {
     echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
     glide cc
     rm -rf vendor
-    glide up --strip-vendor
+    rm -rf ~/.glide
+    if [ -n "$1" ]
+    then
+        glide up --strip-vendor
+    else
+        glide install
+    fi
 }
 
 echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
@@ -95,7 +100,7 @@ lyftpip() {
   }
 
 showpin() {
-    echo "ab1eih8N"
+    echo "ab1eih8N" | xclip -selection c
 }
 
 svpn() {
@@ -103,5 +108,10 @@ svpn() {
     echo "ab1eih8N" | xclip -selection c
     ./vpn
 }
+
+alias bless=$lyft/blessclient/bless
+
+echo -e "${RED}bless${NC} ./$HOME/go/src/github.com/lyft/blessclient/bless"
+
 
 echo_blue "################################################################################"
