@@ -16,6 +16,5 @@ ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" /usr/lo
 
 
 source $DIR/gen_env.sh
-source $DIR/lyft_env.sh
-source $DIR/mac_env.sh
+#source $DIR/lyft_env.sh
 

@@ -91,3 +91,9 @@ function parse_git_dirty {
 }
 
 export PS1="\[\e[36m\]\`parse_git_branch\`\[\e[m\]_[\[\e[35m\]\u\[\e[m\]@\h]\[\e[36m\]\w\[\e[m\]\\$ "
+
+fdiff(){
+    echo -e "${RED}fdiff${NC}  git diff --stat --color master"
+    git diff --stat --color master
+}
+echo -e "${RED}fdiff${NC}  git diff --stat --color master"

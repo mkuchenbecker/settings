@@ -50,16 +50,6 @@ onesync() {
 }
 echo -e "${RED}onesync repo_name${NC} will sync the repo with onebox."
 
-mansync() {
-    $lyft/hacktools/sync-to-onebox-v3.sh podie-integration-$ONEBOXNAME
-}
-echo -e "${RED}onesync repo_name${NC} will sync the repo with onebox."
-
-dualsync() {
-    $lyft/hacktools/unison-to-onebox-v4.sh $1-$ONEBOXNAME
-}
-
-
 enter() {
     control enter $1.legacy
 }
@@ -83,25 +73,15 @@ fuckglide() {
         glide install
     fi
 }
-
 echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
-
-fdiff(){
-    echo -e "${RED}fdiff${NC}  git diff --stat --color master"
-    git diff --stat --color master
-}
-echo -e "${RED}fdiff${NC}  git diff --stat --color master"
 
 
 echo -e $GITSMASHHELP
 
 lyftpip() {
   PIP_CONFIG_FILE="$HOME/.pip/lyft.conf" pip "$@"
-  }
-
-showpin() {
-    echo "ab1eih8N" | xclip -selection c
 }
+
 
 svpn() {
     cd ~/.vpn
