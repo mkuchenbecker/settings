@@ -12,14 +12,13 @@ echo -e ${RED}STASHBOX${NC}:$STASHBOX
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/go/src/github.com/lyft
-export VIRTUALENVWRAPPER_PYTHON=`which python3`
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 export WORKSPACE=$lyft
 
 export CREDENTIALS_MYSQL_STAGING_PASSWORD=WS7xMhpdMMhLs5zPwj02qfno44Nelia2F
 export CREDENTIALS_POSTGRESQL_STAGING_PASSWORD=h5JHzZq8K2UhCAGlIDGUo5T0mgmvnwKjzDq5eKDT2SPnL2rnDa
-
 
 #################### Commands ####################
 
@@ -33,10 +32,8 @@ scp_env() {
 }
 echo -e "${RED}scp_env${NC} Copy env confifig to onebox."
 
-
 myonebox() {
-    if [ -n "$1" ]
-    then
+    if [ -n "$1" ]; then
         ssh -t $MYONEBOX "control enter $1.legacy"
     else
         ssh $MYONEBOX
@@ -66,8 +63,7 @@ fuckglide() {
     glide cc
     rm -rf vendor
     rm -rf ~/.glide
-    if [ -n "$1" ]
-    then
+    if [ -n "$1" ]; then
         glide up --strip-vendor
     else
         glide install
@@ -75,13 +71,11 @@ fuckglide() {
 }
 echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
 
-
 echo -e $GITSMASHHELP
 
 lyftpip() {
-  PIP_CONFIG_FILE="$HOME/.pip/lyft.conf" pip "$@"
+    PIP_CONFIG_FILE="$HOME/.pip/lyft.conf" pip "$@"
 }
-
 
 svpn() {
     cd ~/.vpn
@@ -92,6 +86,5 @@ svpn() {
 alias bless=$lyft/blessclient/bless
 
 echo -e "${RED}bless${NC} ./$HOME/go/src/github.com/lyft/blessclient/bless"
-
 
 echo_blue "################################################################################"
