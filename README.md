@@ -1,11 +1,3 @@
-# settings
-
-First run:
-./init.sh
-
-
-Then:
-./configure.sh
-
-Finally:
-./start.sh
+curl https://raw.githubusercontent.com/mkuchenbecker/settings/master/bootstrap.sh -O
+sudo chmod +x bootstrap.sh
+./bootstrap.sh
