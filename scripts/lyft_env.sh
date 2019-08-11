@@ -17,9 +17,6 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 
 export WORKSPACE=$lyft
 
-export CREDENTIALS_MYSQL_STAGING_PASSWORD=WS7xMhpdMMhLs5zPwj02qfno44Nelia2F
-export CREDENTIALS_POSTGRESQL_STAGING_PASSWORD=h5JHzZq8K2UhCAGlIDGUo5T0mgmvnwKjzDq5eKDT2SPnL2rnDa
-
 #################### Commands ####################
 
 scp_env() {
