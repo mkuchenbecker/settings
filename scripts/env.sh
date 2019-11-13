@@ -12,7 +12,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 code() { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 
-ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" /usr/local/bin/gedit
+# ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" /usr/local/bin/gedit
 
 source $DIR/gen_env.sh
 #source $DIR/lyft_env.sh

@@ -13,6 +13,7 @@ echo_blue() {
 }
 
 PS1="\w$ "
+stty intr ^j
 
 gitsmash() {
 	git add .
