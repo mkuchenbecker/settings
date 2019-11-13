@@ -18,5 +18,8 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list && \
 sudo apt-get update -q && \
 sudo apt-get install -qy kubeadm
+<<<<<<< HEAD
 
 sudo usermod -a -G docker $USER
+=======
+>>>>>>> 9ab04488bcb3678c2c483af6bdf8e5cec5714673

@@ -1,13 +1,13 @@
-sudo apt-get install vim
-sudo apt-get install git
+sudo apt-get -y install vim
+sudo apt-get -y install git
 
 sudo add-apt-repository -y ppa:longsleep/golang-backports &&
     sudo apt-get update &&
     sudo apt-get install golang-go
 
-sudo apt-get install go-dep
+sudo apt-get -y install go-dep
 
-sudo apt-get install \
+sudo apt-get -y install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -42,4 +42,4 @@ go get -d -u github.com/golang/protobuf/protoc-gen-go &&
 go get github.com/golang/mock/gomock &&
     go install github.com/golang/mock/mockgen
 
-sudo apt-get install python3-pip
+sudo apt-get -y install python3-pip
