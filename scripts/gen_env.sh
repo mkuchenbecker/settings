@@ -113,3 +113,5 @@ fdiff() {
 	git diff --stat --color master
 }
 echo -e "${RED}fdiff${NC}  git diff --stat --color master"
+
+alias k=kubectl
