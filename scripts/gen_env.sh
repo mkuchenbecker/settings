@@ -122,3 +122,5 @@ echo -e "${RED}fdiff${NC}  git diff --stat --color master"
 alias k=kubectl
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
