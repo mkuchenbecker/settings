@@ -1,15 +1,15 @@
-# settings
-
-Edit the file `scripts/edit_this_file.sh` with your onebox name.
-
-Run `./init.sh`
-
-Add the following line to the end of your ~/.bashrc
 ```
-source /path/to/repo/scripts/env.sh
+curl https://raw.githubusercontent.com/mkuchenbecker/settings/master/bootstrap.sh -O
+sudo chmod +x bootstrap.sh
+./bootstrap.sh
 ```
 
-Add the following line to the end of your .vimrc
+https://kubecloud.io/setting-up-a-kubernetes-1-11-raspberry-pi-cluster-using-kubeadm-952bbda329c8
+
 ```
-so /path/to/repo/vim.vim
+./raspi-net-setup.sh brewpi-worker7 192.168.86.107 192.168.86.1
+```
+
+```
+kubectl apply -f “https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d ‘\n’)
 ```
