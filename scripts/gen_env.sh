@@ -55,6 +55,11 @@ function parse_git_branch() {
 	fi
 }
 
+sshaddhome(){
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+}
+
 # get current status of git repo
 function parse_git_dirty {
 	status=`git status 2>&1 | tee`
