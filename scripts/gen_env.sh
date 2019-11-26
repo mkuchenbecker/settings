@@ -120,3 +120,5 @@ fdiff() {
 echo -e "${RED}fdiff${NC}  git diff --stat --color master"
 
 alias k=kubectl
+export VISUAL=vim
+export EDITOR="$VISUAL"
