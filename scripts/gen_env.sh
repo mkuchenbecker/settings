@@ -126,4 +126,4 @@ export EDITOR="$VISUAL"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 
-alias kpod=$(k get pods | grep -oh 'brewery-deployment-.*-\S*')
+alias kpod="kubectl get pods | grep -oh 'brewery-deployment-.*-\S*'"
