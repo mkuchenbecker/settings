@@ -127,3 +127,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 
 alias kpod="kubectl get pods | grep -oh 'brewery-deployment-.*-\S*'"
+kp(){
+	export KPOD=$(kpod)
+	echo $KPOD
+}
