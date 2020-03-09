@@ -13,7 +13,7 @@ echo_blue() {
 }
 
 PS1="\w$ "
-stty intr ^j
+stty intr ^k
 
 gitsmash() {
 	git add .
@@ -123,11 +123,18 @@ alias k=kubectl
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+#export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 
-alias kpod="kubectl get pods | grep -oh 'brewery-deployment-.*-\S*'"
+alias kpod="kubectl get pods | grep -oh '-.*-\S*'"
 kp(){
 	export KPOD=$(kpod)
 	echo $KPOD
+}
+
+kp(){ # Gets the first pod in the pod list and stores it in the KPOD env var.
+    echo "lyftkube get pods -p $1 -e $2 | grep -oh 'core-.*-\S*' -m 1"
+    lyftkube get pods -p $1 -e $2
+    export KPOD=$(lyftkube get pods -p $1 -e $2 | grep -oh 'core-.*-\S*' -m 1)
+    echo "KPOD=$KPOD"
 }

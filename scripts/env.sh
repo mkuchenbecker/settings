@@ -17,7 +17,13 @@ code() { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 # ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" /usr/local/bin/gedit
 
 source $DIR/gen_env.sh
-#source $DIR/opt_env.sh
+source $DIR/opt_env.sh
 
 alias python=python3
 alias pip=pip3
+
+
+echo -e "${RED}reloadenv${NC}  reloads the env.sh"
+reloadenv() {
+  source $DIR/env.sh
+}

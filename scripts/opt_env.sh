@@ -45,6 +45,18 @@ onesync() {
 }
 echo -e "${RED}onesync repo_name${NC} will sync the repo with onebox."
 
+
+
+
 eaws() {
     aws-okta exec zimride-sudo-developer -- $SHELL
 }
+
+kenv() {
+    KENV=$1
+}
+
+kpro() {
+    KPROJECT=$1
+}
+export PATH="$HOME/bin:$PATH"
