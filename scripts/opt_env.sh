@@ -4,21 +4,6 @@ echo_blue "#####################################################################
 
 #################### Commands ####################
 
-fuckglide() {
-    echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
-    glide cc
-    rm -rf vendor
-    rm -rf ~/.glide
-    if [ -n "$1" ]; then
-        glide up --strip-vendor
-    else
-        glide install
-    fi
-}
-echo -e "${RED}fuckglide${NC} glide cc && rm -rf vendor && glide up --strip-vendor"
-
-
-
 alias k=lyftkube
 
 export lyft=~/go/src/github.com/lyft
@@ -60,3 +45,7 @@ kpro() {
     KPROJECT=$1
 }
 export PATH="$HOME/bin:$PATH"
+
+export GOPROXY='https://athens.ingress.infra.us-east-1.k8s.lyft.net'
+export GONOSUMDB='github.com/lyft/*,github.lyft.net/*'
+export GO111MODULE='on'
